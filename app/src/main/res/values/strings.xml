@@ -1,0 +1,43 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">IntercamPrueba</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_email">Correo electrónico</string>
+    <string name="text_required_field">Campo vació</string>
+    <string name="text_warning_email">Correo invalido</string>
+    <string name="text_warning_email_password">Usuario y contraseña incorrectos intente de nuevo.</string>
+
+    <string name="text_password">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+
+    <string name="text_ok">Aceptar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="hint_description">Descripción</string>
+    <string name="hint_title">Titulo</string>
+    <string name="ibu">ibu</string>
+    <string name="og">og</string>
+    <string name="fg">fg</string>
+    <string name="abv">abv</string>
+
+    <string name="lorem_title">Lorem ipsum title</string>
+    <string name="lorem_description">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</string>
+    <string name="text_brewers_tips">Brewers Tips:</string>
+    <string name="text_food_pairing">Food Pairing</string>
+    <string name="text_hops">Hops:</string>
+    <string name="text_malt">Malt:</string>
+
+    <string name="title_close_app">Aviso</string>
+    <string name="description_close_app">Deseas salir de la aplicación</string>
+
+    <string name="text_warning_remove_fav">Quitar de mis favoritos?</string>
+
+    <string name="toolbar_beers">Beers</string>
+    <string name="toolbar_detail">Beers detail</string>
+    <string name="toolbar_fav">Beers saved</string>
+    <string name="text_first_brewen">First Brewed:
+        <xliff:g example="09/12" id="brewed"> %1$s </xliff:g>
+    </string>
+
+    <string name="text_add_favorites">Producto agragado a favoritos</string>
+</resources>

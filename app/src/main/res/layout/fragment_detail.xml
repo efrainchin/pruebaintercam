@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe"
+        tools:context=".ui.detail.DetailFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="50dp">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAbv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.2" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+                    app:layout_constraintStart_toStartOf="@+id/tvSubtitle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Buzz" />
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                    tools:text="tag line" />
+
+                <TextView
+                    android:id="@+id/tvVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+                    app:layout_constraintStart_toStartOf="@+id/tvSubtitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+                    tools:text="20 litres" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/StyleTextBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/abv"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                    app:layout_constraintEnd_toStartOf="@+id/textView6"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/StyleTextBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/ibu"
+                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/tvSubtitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tvVolume" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/StyleTextBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/og"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                    app:layout_constraintEnd_toStartOf="@+id/textView7"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/StyleTextBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/fg"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/tvAbv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/textView5"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5"
+                    tools:text="4.5%" />
+
+                <TextView
+                    android:id="@+id/tvIbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/textView4"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    tools:text="5G" />
+
+                <TextView
+                    android:id="@+id/tvOg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/textView6"
+                    app:layout_constraintStart_toStartOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    tools:text="1044" />
+
+                <TextView
+                    android:id="@+id/tvFg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/textView7"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    tools:text="1010" />
+
+                <TextView
+                    android:id="@+id/tvTagLine"
+                    style="@style/StyleTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+                    app:layout_constraintStart_toStartOf="@+id/ivLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+                    tools:text="@string/lorem_title" />
+
+                <TextView
+                    android:id="@+id/tvFirstBrewed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvTagLine"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTagLine"
+                    tools:text="@string/lorem_title" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    style="@style/StyleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/text_brewers_tips"
+                    app:layout_constraintStart_toStartOf="@+id/ivLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFirstBrewed" />
+
+                <TextView
+                    android:id="@+id/tvTips"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16"
+                    tools:text="@string/lorem_description" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    style="@style/StyleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/text_food_pairing"
+                    app:layout_constraintStart_toStartOf="@+id/ivLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTips" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFoodPairing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+                    app:layout_constraintStart_toStartOf="@+id/ivLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_food_pairing" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/text_hops"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/textView19"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/ivLogo"
+                    app:layout_constraintTop_toBottomOf="@+id/rvFoodPairing" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/text_malt"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSubtitle"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView18"
+                    app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHops"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView18"
+                    app:layout_constraintStart_toStartOf="@+id/textView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_hops" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMalt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView19"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_hops" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>
